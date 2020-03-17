@@ -1,0 +1,2 @@
+$("#paginationList").html("<%= escape_javascript(render("tasks_list")) %>");
+$("#paginator").html("<%= escape_javascript(paginate(@tasks, remote: true)) %>");

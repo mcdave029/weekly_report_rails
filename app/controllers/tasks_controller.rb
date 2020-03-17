@@ -7,7 +7,8 @@ class TasksController < ApplicationController
   # GET /tasks
   # GET /tasks.json
   def index
-    @tasks = Task.includes(:project).all
+    @tasks = Task.includes(:project).order(created_at: :desc)
+                 .page(params[:page]).per(10)
   end
 
   # GET /tasks/1
