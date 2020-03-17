@@ -2,5 +2,7 @@
 
 <%= render 'form', task: @task %>
 
-<%= link_to 'Show', @task %> |
-<%= link_to 'Back', tasks_path %>
+<div class="btn-group" role="group" aria-label="Basic example">
+  <%= link_to 'Show', @task, class: "btn btn-primary" %>
+  <%= link_to 'Back', tasks_path, class: "btn btn-primary" %>
+</div>

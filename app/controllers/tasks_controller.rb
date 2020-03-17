@@ -7,7 +7,7 @@ class TasksController < ApplicationController
   # GET /tasks
   # GET /tasks.json
   def index
-    @tasks = Task.includes(:project, :owner).all
+    @tasks = Task.includes(:project).all
   end
 
   # GET /tasks/1
@@ -91,6 +91,6 @@ class TasksController < ApplicationController
   def task_params
     params.require(:task)
           .permit(:project_id, :start_at, :end_at, :status, :references,
-                  :comments)
+                  :comments, :name)
   end
 end
