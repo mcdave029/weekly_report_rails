@@ -20,6 +20,7 @@ class TasksController < ApplicationController
     @project_options = Project.all.collect do |p|
       [p.name, p.id]
     end
+    @statuses = Task::STATUSES
   end
 
   # GET /tasks/1/edit
@@ -27,6 +28,7 @@ class TasksController < ApplicationController
     @project_options = Project.all.collect do |p|
       [p.name, p.id]
     end
+    @statuses = Task::STATUSES
   end
 
   # POST /tasks

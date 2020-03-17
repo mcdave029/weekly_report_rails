@@ -23,7 +23,11 @@
         <td><%= task.owner.email %></td>
         <td><%= prettify task.start_at %></td>
         <td><%= prettify task.end_at %></td>
-        <td><%= task.status %></td>
+        <td>
+          <span class="badge badge-pill badge-<%= status_color task %>">
+            <%= task.status %>
+          </span>
+        </td>
         <td><%= task.references %></td>
         <td><%= task.comments %></td>
         <td><%= link_to 'Show', task, class: "btn btn-info btn-sm" %></td>
