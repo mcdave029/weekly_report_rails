@@ -7,4 +7,6 @@ class User < ApplicationRecord
   # :trackable and :omniauthable
   devise :database_authenticatable, :recoverable,
          :rememberable, :validatable
+
+  has_many :tasks, foreign_key: :owner_id, dependent: :destroy
 end

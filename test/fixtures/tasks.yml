@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  project: one
+  owner: one
+  start_at: 2020-03-17 12:50:54
+  end_at: 2020-03-17 12:50:54
+  status: MyString
+  references: MyText
+  comments: MyText
+
+two:
+  project: two
+  owner: two
+  start_at: 2020-03-17 12:50:54
+  end_at: 2020-03-17 12:50:54
+  status: MyString
+  references: MyText
+  comments: MyText

@@ -10,7 +10,13 @@
   </head>
 
   <body class="h-100">
-    <%= render "shared/nav" if user_signed_in? %>
-    <%= yield %>
+    <% if user_signed_in? %>
+    <%= render "shared/nav" %>
+      <div class="container">
+        <%= yield %>
+      </div>
+    <% else %>
+      <%= yield %>
+    <% end %>
   </body>
 </html>
